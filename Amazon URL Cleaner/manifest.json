@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon URL Cleaner",
+  "version": "1.0",
+  "description": "Simplifies Amazon URLs to just the ASIN.",
+  "permissions": [
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.amazon.ae/*",
+    "*://*.amazon.ca/*",
+    "*://*.amazon.co.jp/*",
+    "*://*.amazon.co.uk/*",
+    "*://*.amazon.co.za/*",
+    "*://*.amazon.com/*",
+    "*://*.amazon.com.au/*",
+    "*://*.amazon.com.be/*",
+    "*://*.amazon.com.br/*",
+    "*://*.amazon.com.tr/*",
+    "*://*.amazon.com.mx/*",
+    "*://*.amazon.de/*",
+    "*://*.amazon.es/*",
+    "*://*.amazon.eg/*",
+    "*://*.amazon.fr/*",
+    "*://*.amazon.in/*",
+    "*://*.amazon.ie/*",
+    "*://*.amazon.it/*",
+    "*://*.amazon.nl/*",
+    "*://*.amazon.pl/*",
+    "*://*.amazon.sa/*",
+    "*://*.amazon.se/*",
+    "*://*.amazon.sg/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
