@@ -6,12 +6,12 @@ chrome.webNavigation.onBeforeNavigate.addListener(
     
     const url = new URL(details.url);
     
-    // Check if it's an Amazon product page with /dp/ in the path
-    const dpMatch = url.pathname.match(/\/dp\/([A-Z0-9]{10})/);
+    // Check if it's an Amazon product page with /dp/ or /product/ in the path
+    const dpMatch = url.pathname.match(/\/(?:dp|product)\/([A-Z0-9]{10})/);
     
     if (dpMatch) {
-      const dpCode = dpMatch[1];
-      const cleanUrl = `${url.protocol}//${url.hostname}/dp/${dpCode}`;
+      const asin = dpMatch[1];
+      const cleanUrl = `${url.protocol}//${url.hostname}/dp/${asin}`;
       
       // Only redirect if the URL is different from the clean version
       if (details.url !== cleanUrl) {
